@@ -1,8 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Assessment.Data; 
+using AgenciaTurismo.Data;
 
-namespace Assessment
-{
+namespace Assessment{
     public class Program
     {
         public static void Main(string[] args)

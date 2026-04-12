@@ -1,5 +1,5 @@
 ﻿using AgenciaTurismo.Models;
-
+using System.Collections.Generic;
 public class Cliente
 {
     public int Id { get; set; }

@@ -1,16 +1,17 @@
-﻿using AgenciaTurismo.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using AgenciaTurismo.Models;
 
-public class AgenciaContext : DbContext
+namespace AgenciaTurismo.Data
 {
-    public AgenciaContext(DbContextOptions<AgenciaContext> options)
-        : base(options)
+    public class AgenciaContext : DbContext
     {
-    }
+        public AgenciaContext(DbContextOptions<AgenciaContext> options)
+            : base(options)
+        {
+        }
 
-    public DbSet<Cliente> Clientes { get; set; }
-    public DbSet<Reserva> Reservas { get; set; }
-    public DbSet<PacoteTuristico> Pacotes { get; set; }
-    public DbSet<Destino> Destinos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Reserva> Reservas { get; set; }
+        public DbSet<PacoteTuristico> Pacotes { get; set; }
+    }
 }

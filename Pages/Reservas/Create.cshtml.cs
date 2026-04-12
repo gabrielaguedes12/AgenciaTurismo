@@ -5,8 +5,15 @@ namespace AgenciaTurismo.Pages.Reservas
 {
     public class CreateModel : PageModel
     {
-        public void OnGet()
+        [BindProperty]
+        public Reserva Reserva { get; set; }
+
+        public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+                return Page();
+
+            return RedirectToPage("Index");
         }
     }
 }

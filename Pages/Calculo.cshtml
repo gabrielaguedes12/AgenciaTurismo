@@ -1,0 +1,15 @@
+﻿@page
+@model AgenciaTurismo.Pages.CalculoModel
+
+<h2>Calcular Total</h2>
+
+<form method="post">
+    <input asp-for="Quantidade" placeholder="Quantidade" />
+    <input asp-for="Preco" placeholder="Preço" />
+    <button type="submit">Calcular</button>
+</form>
+
+@if (Model.Total > 0)
+{
+    <p>Total: @Model.Total</p>
+}

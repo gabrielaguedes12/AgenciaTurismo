@@ -1,4 +1,32 @@
 ﻿@page
-@model AgenciaTurismo.Pages.Pacotes.CreateModel
-@{
-}
+@model CreateModel
+
+<h2>Criar Pacote</h2>
+
+<form method="post">
+    <div>
+        <label>Título</label>
+        <input asp-for="Pacote.Titulo" />
+        <span asp-validation-for="Pacote.Titulo"></span>
+    </div>
+
+    <div>
+        <label>Data</label>
+        <input asp-for="Pacote.DataInicio" type="date" />
+        <span asp-validation-for="Pacote.DataInicio"></span>
+    </div>
+
+    <div>
+        <label>Capacidade</label>
+        <input asp-for="Pacote.CapacidadeMaxima" />
+        <span asp-validation-for="Pacote.CapacidadeMaxima"></span>
+    </div>
+
+    <div>
+        <label>Preço</label>
+        <input asp-for="Pacote.Preco" />
+        <span asp-validation-for="Pacote.Preco"></span>
+    </div>
+
+    <button type="submit">Salvar</button>
+</form>

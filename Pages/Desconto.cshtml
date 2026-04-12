@@ -1,0 +1,14 @@
+﻿@page
+@model AgenciaTurismo.Pages.DescontoModel
+
+<h2>Calcular Desconto</h2>
+
+<form method="post">
+    <input asp-for="Preco" placeholder="Digite o preço" />
+    <button type="submit">Calcular</button>
+</form>
+
+@if (Model.PrecoComDesconto > 0)
+{
+    <p>Preço com desconto: @Model.PrecoComDesconto</p>
+}

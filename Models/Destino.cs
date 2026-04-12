@@ -1,4 +1,6 @@
-﻿public class Destino
+﻿using System.Collections.Generic;
+using AgenciaTurismo.Models;
+public class Destino
 {
     public int Id { get; set; }
 

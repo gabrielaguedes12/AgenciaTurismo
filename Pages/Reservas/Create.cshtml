@@ -1,4 +1,6 @@
-﻿@page
-@model AgenciaTurismo.Pages.Reservas.CreateModel
-@{
-}
+﻿<form method="post">
+    <input asp-for="Reserva.NomeCliente" />
+    <span asp-validation-for="Reserva.NomeCliente"></span>
+
+    <button type="submit">Salvar</button>
+</form>

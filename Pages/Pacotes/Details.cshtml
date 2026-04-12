@@ -1,4 +1,8 @@
-﻿@page
+﻿@page "{id:int}"
 @model AgenciaTurismo.Pages.Pacotes.DetailsModel
-@{
-}
+
+<h2>Detalhes do Pacote</h2>
+
+<p><strong>Título:</strong> @Model.Pacote.Titulo</p>
+<p><strong>Data:</strong> @Model.Pacote.DataInicio</p>
+<p><strong>Preço:</strong> @Model.Pacote.Preco</p>
