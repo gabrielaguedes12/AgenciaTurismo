@@ -10,8 +10,8 @@ namespace AgenciaTurismo.Data
         {
         }
 
-        public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Reserva> Reservas { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
         public DbSet<PacoteTuristico> Pacotes { get; set; }
     }
 }

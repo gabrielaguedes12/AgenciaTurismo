@@ -1,4 +1,8 @@
 ﻿@page
 @model AgenciaTurismo.Pages.Auth.LoginModel
-@{
-}
+
+<form method="post">
+    <input asp-for="Usuario" placeholder="Usuário" />
+    <input asp-for="Senha" type="password" placeholder="Senha" />
+    <button type="submit">Login</button>
+</form>

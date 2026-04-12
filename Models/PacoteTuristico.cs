@@ -23,10 +23,8 @@ namespace AgenciaTurismo.Models
         [Range(0.01, 100000, ErrorMessage = "Preço deve ser maior que zero")]
         public decimal Preco { get; set; }
 
-        // RELACIONAMENTO
         public List<Reserva> Reservas { get; set; } = new List<Reserva>();
 
-        // (opcional mas bom pra nota)
         public bool IsDeleted { get; set; } = false;
     }
 }

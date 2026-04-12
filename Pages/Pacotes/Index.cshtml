@@ -1,4 +1,10 @@
 ﻿@page
 @model AgenciaTurismo.Pages.Pacotes.IndexModel
-@{
+
+<h1>Pacotes</h1>
+
+@foreach (var item in Model.Pacotes)
+{
+    <p>@item.Titulo</p>
+    <p>@item.Preco</p>
 }

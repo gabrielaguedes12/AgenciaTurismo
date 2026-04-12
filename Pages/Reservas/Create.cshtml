@@ -1,6 +1,21 @@
-﻿<form method="post">
-    <input asp-for="Reserva.NomeCliente" />
-    <span asp-validation-for="Reserva.NomeCliente"></span>
+﻿@page
+@model AgenciaTurismo.Pages.Reservas.CreateModel
+
+<form method="post">
+    <<div>
+        <label>Cliente ID</label>
+        <input asp-for="Reserva.ClienteId" />
+    </div>
+
+    <div>
+        <label>Pacote ID</label>
+        <input asp-for="Reserva.PacoteTuristicoId" />
+    </div>
+
+    <div>
+        <label>Data da Reserva</label>
+        <input asp-for="Reserva.DataReserva" type="date" />
+    </div>
 
     <button type="submit">Salvar</button>
 </form>

@@ -8,22 +8,23 @@ namespace AgenciaTurismo.Pages.Pacotes
     {
         private readonly AgenciaContext _context;
 
-    public CreateModel(AgenciaContext context)
-    {
-        _context = context;
-    }
+        public CreateModel(AgenciaContext context)
+        {
+            _context = context;
+        }
 
-    [BindProperty]
-    public PacoteTuristico Pacote { get; set; }
+        [BindProperty]
+        public PacoteTuristico Pacote { get; set; }
 
-    public IActionResult OnPost()
-    {
-        if (!ModelState.IsValid)
-            return Page();
+        public IActionResult OnPost()
+        {
+            if (!ModelState.IsValid)
+                return Page();
 
-        _context.Pacotes.Add(Pacote);
-        _context.SaveChanges();
+            _context.Pacotes.Add(Pacote);
+            _context.SaveChanges();
 
-        return RedirectToPage("Index");
+            return RedirectToPage("Index");
+        }
     }
 }
